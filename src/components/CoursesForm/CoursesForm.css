@@ -22,3 +22,12 @@
     background-color: #3aba91;
     color: white;
 }
+
+.container__banner {
+    height: 330px;
+    background-image: url('https://image.freepik.com/free-photo/reading-adult-person-entrepreneur-job_1262-2693.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: center;
+    z-index: -1;
+}

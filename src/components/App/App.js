@@ -52,11 +52,15 @@ class App extends Component {
     return this.state.courses.map((serie) => {
 
       return (
-          <div key={serie.course.id}>
+          <div 
+            className="container__cards"
+            key={serie.course.id}
+          >
             <CoursesCards
               title={serie.course.name}
               provider={serie.course.provider.name}
               description={serie.course.deliveryMethod.description}
+              price={serie.price}
             />
           </div>
       );

@@ -32,25 +32,29 @@ class CoursesForm extends React.Component {
     render() {
 
         return (
-            <form onSubmit={this.handleOnSubmit}>
-                <div>
-                    <input
-                        className="input__search"
-                        type="search"
-                        placeholder="Search courses and providers..."
-                        value={this.state.searchQuery}
-                        onChange={this.handleOnChange}
-                    />
+            <div className="container">
+                <div className="container__banner">
+                    <form onSubmit={this.handleOnSubmit}>
+                        <div>
+                            <input
+                                className="input__search"
+                                type="search"
+                                placeholder="Search courses and providers..."
+                                value={this.state.searchQuery}
+                                onChange={this.handleOnChange}
+                            />
+                        </div>
+                        <div>
+                            <button
+                                className="button__search"
+                                type="submit"
+                            >
+                                +
+                            </button>
+                        </div>
+                    </form>
                 </div>
-                <div>
-                    <button
-                        className="button__search"
-                        type="submit"
-                    >
-                        +
-                    </button>
-                </div>
-            </form>
+            </div>
         )
     }
 }

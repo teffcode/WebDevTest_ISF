@@ -1,21 +1,24 @@
 import React from 'react';
 
+import ButtonPrice from '../Buttons/ButtonPrice/ButtonPrice';
+
 import './CoursesCards.css';
 
-const CoursesCard = ({title, provider, description}) => {
+const CoursesCard = ({title, provider, description, price}) => {
 
     return (
         <div className="card">
             <div>
-                <p>
+                <h3 className="card__title">
                     {title}
-                </p>
-                <p>
+                </h3>
+                <p className="card__provider">
                     {provider}
                 </p>
-                <p>
+                <p className="card__description">
                     {description}
                 </p>
+                <ButtonPrice price={price}/>
             </div>
         </div>
     );
