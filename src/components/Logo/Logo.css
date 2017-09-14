@@ -1,0 +1,8 @@
+.logo__image {
+    width:"140px";
+    height:'30px'; 
+    margin-top:'10px';
+    position: 'absolute';
+    left: '85px';
+    top: '2px';
+}

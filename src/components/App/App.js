@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import NavigationBar from '../NavigationBar/NavigationBar';
 import CoursesCards from '../CoursesCards/CoursesCards';
 import SearchForm from '../CoursesForm/CoursesForm';
 
@@ -64,22 +65,25 @@ class App extends Component {
 
   render() {
     return (
-      <div className="section">
-        <div className="column is-6">              
-          <SearchForm
-            onSubmit={this.handleSearchFormSubmit}
-            loading={this.state.loading}
-          />
-          {
-            !!this.state.query &&
-            <div>
-                You searched for: {this.state.query}
+      <div>
+        <NavigationBar/>
+        <div className="section">
+          <div className="column is-6">              
+            <SearchForm
+              onSubmit={this.handleSearchFormSubmit}
+              loading={this.state.loading}
+            />
+            {
+              !!this.state.query &&
+              <div>
+                  You searched for: {this.state.query}
+              </div>
+            }
+          </div>
+          <div className="container">
+            <div className="columns is-multiline">
+              {this.renderCourses()}
             </div>
-          }
-        </div>
-        <div className="container">
-          <div className="columns is-multiline">
-            {this.renderCourses()}
           </div>
         </div>
       </div>

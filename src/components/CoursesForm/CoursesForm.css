@@ -1,0 +1,24 @@
+.input__search {
+    position: absolute;
+    top: 220px;
+    left: 410px;
+    width: 410px;
+    height: 45px;
+    border-radius: 8px 0 0 8px;
+    border: none;
+    padding-left: 20px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.button__search {
+    position: absolute;
+    top: 220px;
+    left: 822px;
+    width: 47px;
+    height: 47px;
+    border-radius: 0 8px 8px 0;
+    border: none;
+    background-color: #3aba91;
+    color: white;
+}

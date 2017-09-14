@@ -35,6 +35,7 @@ class CoursesForm extends React.Component {
             <form onSubmit={this.handleOnSubmit}>
                 <div>
                     <input
+                        className="input__search"
                         type="search"
                         placeholder="Search courses and providers..."
                         value={this.state.searchQuery}
@@ -43,6 +44,7 @@ class CoursesForm extends React.Component {
                 </div>
                 <div>
                     <button
+                        className="button__search"
                         type="submit"
                     >
                         +
