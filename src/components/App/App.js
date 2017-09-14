@@ -53,7 +53,7 @@ class App extends Component {
 
       return (
           <div 
-            className="container__cards"
+            className="container__card"
             key={serie.course.id}
           >
             <CoursesCards
@@ -84,10 +84,8 @@ class App extends Component {
               </div>
             }
           </div>
-          <div className="container">
-            <div className="columns is-multiline">
-              {this.renderCourses()}
-            </div>
+          <div className="container__cards">
+            {this.renderCourses()}
           </div>
         </div>
       </div>

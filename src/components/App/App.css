@@ -1,3 +1,15 @@
+.container__card {
+    display: inline-block;
+    margin: 10px;
+}
+
+.container__courses {
+    display: flex;
+    align-items: center;
+}
+
 .container__cards {
-    margin: 55px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 50px 0 50px;
 }
