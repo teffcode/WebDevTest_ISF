@@ -1,6 +1,5 @@
 ul {
-    left: 500px;
-    top: 4px;
+    display: inline-block;
 }
 
 .menu__main__items {
