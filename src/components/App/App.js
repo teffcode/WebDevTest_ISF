@@ -112,8 +112,7 @@ class App extends Component {
     return (
       <div>
         <NavigationBar/>
-        <div className="section">
-          <div className="column is-6">              
+          <div>              
             <SearchForm
               onSubmit={this.handleSearchFormSubmit}
               loading={this.state.loading}
@@ -137,7 +136,6 @@ class App extends Component {
               {this.renderCourses()}
             </div>
           </div>
-        </div>
       </div>
     );
   }

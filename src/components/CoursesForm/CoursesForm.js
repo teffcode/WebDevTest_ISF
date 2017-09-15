@@ -33,24 +33,27 @@ class CoursesForm extends React.Component {
 
         return (
             <div className="container">
+                <div className="container__banner__filter"></div>
                 <div className="container__banner">
                     <form onSubmit={this.handleOnSubmit}>
-                        <div>
-                            <input
-                                className="input__search"
-                                type="search"
-                                placeholder="Search courses and providers..."
-                                value={this.state.searchQuery}
-                                onChange={this.handleOnChange}
-                            />
-                        </div>
-                        <div>
-                            <button
-                                className="button__search"
-                                type="submit"
-                            >
-                                +
-                            </button>
+                        <div className="container__input__button"> 
+                            <h1>Course Search</h1>
+                            <div className="input__button">
+                                <input
+                                    className="input__search"
+                                    type="search"
+                                    placeholder="Search courses and providers..."
+                                    value={this.state.searchQuery}
+                                    onChange={this.handleOnChange}
+                                />
+                                <button
+                                    className="button__search"
+                                    type="submit"
+                                >
+                                    +
+                                </button>
+                            </div>
+                            <h2>Florida | Registered Nurse Florida</h2>
                         </div>
                     </form>
                 </div>
