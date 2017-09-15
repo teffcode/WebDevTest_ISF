@@ -5,6 +5,7 @@
 .image__course {
     width: 350px;
     height: 200px;
+    background-color: rgb(170, 181, 180);
 }
 .featured__card {
     width: 750px;

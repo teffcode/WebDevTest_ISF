@@ -87,8 +87,9 @@ class App extends Component {
 
   renderFeaturedCourses() {
     return this.state.featuredCourses.map((featured) => {
-      
+
       const {featuredBanner} = featured.coursePublication.course
+      const {name} = featured.coursePublication.course
 
       return (
           <div 
@@ -97,7 +98,10 @@ class App extends Component {
           >
             <FeaturedCoursesCards
               imageCourse={`https://storage.cebroker.com/CEBroker/${featuredBanner}`}
-              title={featured.coursePublication.course.name}
+              title={name}
+              provider={featured.coursePublication.course.provider.name}
+              description={featured.coursePublication.course.deliveryMethodObject}
+              price={featured.coursePublication.price}
             />
           </div>
       );
@@ -121,13 +125,17 @@ class App extends Component {
               </div>
             }
           </div>
-          <h2>Featured Courses</h2>
-          <div className="container__provider">
-            {this.renderFeaturedCourses()}
+          <div className="container__courses1">
+            <h3 className="title__courses">Featured Courses</h3>
+            <div className="container__provider">
+              {this.renderFeaturedCourses()}
+            </div>
           </div>
-          <h2>Results</h2>
-          <div className="container__cards">
-            {this.renderCourses()}
+          <div className="container__courses1">
+            <h3 className="title__courses">Results</h3>
+            <div className="container__cards">
+              {this.renderCourses()}
+            </div>
           </div>
         </div>
       </div>
