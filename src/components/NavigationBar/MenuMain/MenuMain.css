@@ -1,4 +1,4 @@
-ul {
+.ul__menu__main {
     display: inline-block;
 }
 
@@ -23,5 +23,11 @@ ul {
         font-weight: bold;
         cursor: pointer;
         padding-right: 25px;
+    }
+}
+
+@media (max-width: 975px){
+    .ul__menu__main {
+        display: none;
     }
 }

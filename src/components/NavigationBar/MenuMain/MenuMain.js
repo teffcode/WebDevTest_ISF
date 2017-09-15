@@ -3,7 +3,7 @@ import React from 'react';
 import './MenuMain.css';
 
 const MenuMain = ({items}) => (
-    <ul>
+    <ul className="ul__menu__main">
         {
             items.map(item => {
                 console.log(item.title)
