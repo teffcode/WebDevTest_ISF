@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import NavigationBar from '../NavigationBar/NavigationBar';
+import FeaturedCoursesCards from '../FeaturedCoursesCards/FeaturedCoursesCards';
 import CoursesCards from '../CoursesCards/CoursesCards';
 import SearchForm from '../CoursesForm/CoursesForm';
 
@@ -15,6 +16,7 @@ class App extends Component {
     this.state = {
       query: '',
       courses: [],
+      featuredCourses: [],
       loading: false,
       error: ''
     };
@@ -48,19 +50,54 @@ class App extends Component {
   }
 
   renderCourses() {
-    console.log(this.state.courses.items)
-    return this.state.courses.map((serie) => {
+    return this.state.courses.map((_course) => {
 
       return (
           <div 
             className="container__card"
-            key={serie.course.id}
+            key={_course.course.id}
           >
             <CoursesCards
-              title={serie.course.name}
-              provider={serie.course.provider.name}
-              description={serie.course.deliveryMethod.description}
-              price={serie.price}
+              title={_course.course.name}
+              provider={_course.course.provider.name}
+              description={_course.course.deliveryMethod.description}
+              price={_course.price}
+            />
+          </div>
+      );
+    });
+  }
+
+  componentWillMount() {
+    axios.get(`https://api.cebroker.com/v2/featuredCoursesProfession?profession=36`)
+      .then(result => {
+        console.log(result.data)
+        this.setState({
+          featuredCourses: result.data
+        });
+      })
+      .catch(err => {
+        this.setState({
+          featuredCourses: [],
+          loading: false,
+          error: err.message
+        });
+      });  
+  }
+
+  renderFeaturedCourses() {
+    return this.state.featuredCourses.map((featured) => {
+      
+      const {featuredBanner} = featured.coursePublication.course
+
+      return (
+          <div 
+            className="container__card"
+            key={featured.coursePublication.id}
+          >
+            <FeaturedCoursesCards
+              imageCourse={`https://storage.cebroker.com/CEBroker/${featuredBanner}`}
+              title={featured.coursePublication.course.name}
             />
           </div>
       );
@@ -84,6 +121,11 @@ class App extends Component {
               </div>
             }
           </div>
+          <h2>Featured Courses</h2>
+          <div className="container__provider">
+            {this.renderFeaturedCourses()}
+          </div>
+          <h2>Results</h2>
           <div className="container__cards">
             {this.renderCourses()}
           </div>

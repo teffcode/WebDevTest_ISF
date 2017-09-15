@@ -13,3 +13,9 @@
     flex-wrap: wrap;
     padding: 0 50px 0 50px;
 }
+
+.container__provider{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

@@ -1,0 +1,37 @@
+.container__featured__card {
+    display: flex;
+}
+
+.image__course {
+    width: 350px;
+    height: 200px;
+}
+.featured__card {
+    width: 750px;
+    height: 180px;
+    background-color: white;
+    margin: 0;
+    padding: 10px 10px 10px 20px;
+    display: inline-block;
+}
+
+.featured__card__title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    color: rgb(30, 42, 42);
+}
+
+.featured__card__provider {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    color: rgb(170, 181, 180);
+    padding: 10px 0 10px 0;
+    margin: 0;
+}
+
+.featured__card__description {
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(116, 121, 120);
+    padding: 10px 0 10px 0;
+    margin: 0;
+}
