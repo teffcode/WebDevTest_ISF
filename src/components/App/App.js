@@ -117,12 +117,6 @@ class App extends Component {
               onSubmit={this.handleSearchFormSubmit}
               loading={this.state.loading}
             />
-            {
-              !!this.state.query &&
-              <div>
-                  You searched for: {this.state.query}
-              </div>
-            }
           </div>
           <div className="container__courses1">
             <h3 className="title__courses">Featured Courses</h3>
@@ -131,7 +125,13 @@ class App extends Component {
             </div>
           </div>
           <div className="container__courses1">
-            <h3 className="title__courses">Results</h3>
+            <h3 className="title__courses">Results 
+            {
+              !!this.state.query &&
+              <div className="searched__for">
+                  | You searched for: {this.state.query}
+              </div>
+            }</h3>
             <div className="container__cards">
               {this.renderCourses()}
             </div>
