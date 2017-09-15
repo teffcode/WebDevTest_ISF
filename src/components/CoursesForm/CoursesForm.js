@@ -33,6 +33,7 @@ class CoursesForm extends React.Component {
 
         return (
             <div className="container">
+                <div style={{height:"99px"}}></div>
                 <div className="container__banner__filter"></div>
                 <div className="container__banner">
                     <form onSubmit={this.handleOnSubmit}>

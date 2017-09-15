@@ -35,6 +35,7 @@ h2 {
     padding-left: 20px;
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
+    outline: none;
 }
 
 .button__search {
@@ -44,6 +45,8 @@ h2 {
     border: none;
     background-color: #3aba91;
     color: white;
+    outline: none;
+    cursor: pointer;
 }
 
 .container__banner {

@@ -4,7 +4,7 @@ import NavbarMain from './NavbarMain/NavbarMain';
 import NavbarTop from './NavbarTop/NavbarTop';
 
 const NavigationBar = () => (
-    <div>
+    <div style={{position: "fixed", zIndex:"3", width:"100%"}}>
         <NavbarTop/>
         <NavbarMain/>
     </div>
