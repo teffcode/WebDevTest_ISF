@@ -1,0 +1,16 @@
+.button__trial {
+    width: 90px;
+    height: 35px;
+    color: white;
+    background-color: #1086b8;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color: #1086b8;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: normal;  
+    left: 1135px;
+    cursor: pointer;
+}
